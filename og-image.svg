@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#c7d2fe"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Subtle grid pattern -->
+  <g opacity="0.05" stroke="#38bdf8" stroke-width="1">
+    <line x1="0" y1="0" x2="0" y2="630"/><line x1="60" y1="0" x2="60" y2="630"/>
+    <line x1="120" y1="0" x2="120" y2="630"/><line x1="180" y1="0" x2="180" y2="630"/>
+    <line x1="240" y1="0" x2="240" y2="630"/><line x1="300" y1="0" x2="300" y2="630"/>
+    <line x1="360" y1="0" x2="360" y2="630"/><line x1="420" y1="0" x2="420" y2="630"/>
+    <line x1="480" y1="0" x2="480" y2="630"/><line x1="540" y1="0" x2="540" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/><line x1="660" y1="0" x2="660" y2="630"/>
+    <line x1="720" y1="0" x2="720" y2="630"/><line x1="780" y1="0" x2="780" y2="630"/>
+    <line x1="840" y1="0" x2="840" y2="630"/><line x1="900" y1="0" x2="900" y2="630"/>
+    <line x1="960" y1="0" x2="960" y2="630"/><line x1="1020" y1="0" x2="1020" y2="630"/>
+    <line x1="1080" y1="0" x2="1080" y2="630"/><line x1="1140" y1="0" x2="1140" y2="630"/>
+    <line x1="0" y1="60" x2="1200" y2="60"/><line x1="0" y1="120" x2="1200" y2="120"/>
+    <line x1="0" y1="180" x2="1200" y2="180"/><line x1="0" y1="240" x2="1200" y2="240"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/><line x1="0" y1="360" x2="1200" y2="360"/>
+    <line x1="0" y1="420" x2="1200" y2="420"/><line x1="0" y1="480" x2="1200" y2="480"/>
+    <line x1="0" y1="540" x2="1200" y2="540"/>
+  </g>
+
+  <!-- Monitor icon (left side) -->
+  <g transform="translate(120, 140)">
+    <rect width="300" height="210" rx="16" fill="none" stroke="url(#glow)" stroke-width="6"/>
+    <rect x="16" y="16" width="268" height="178" rx="6" fill="#0f172a"/>
+    <rect x="16" y="16" width="268" height="178" rx="6" fill="#38bdf8" opacity="0.06"/>
+    <!-- Stand -->
+    <rect x="115" y="216" width="70" height="20" rx="4" fill="url(#glow)"/>
+    <rect x="90" y="236" width="120" height="10" rx="4" fill="url(#glow)"/>
+    <!-- Clock on screen -->
+    <circle cx="150" cy="105" r="60" fill="none" stroke="#38bdf8" stroke-width="4" opacity="0.8"/>
+    <line x1="150" y1="105" x2="150" y2="60" stroke="#f0f9ff" stroke-width="4" stroke-linecap="round"/>
+    <line x1="150" y1="105" x2="185" y2="105" stroke="#f0f9ff" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="150" cy="105" r="6" fill="#38bdf8"/>
+    <!-- Status dots -->
+    <circle cx="36" cy="36" r="6" fill="#4ade80"/>
+    <circle cx="56" cy="36" r="6" fill="#facc15"/>
+    <circle cx="76" cy="36" r="6" fill="#f87171"/>
+  </g>
+
+  <!-- Title text -->
+  <text x="520" y="240" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="800" fill="url(#textGrad)">
+    <tspan x="520" dy="0">Network</tspan>
+    <tspan x="520" dy="85">Operations</tspan>
+    <tspan x="520" dy="85">Center</tspan>
+  </text>
+
+  <!-- Subtitle -->
+  <text x="520" y="480" font-family="system-ui, -apple-system, sans-serif" font-size="36" font-weight="400" fill="#38bdf8" opacity="0.9">
+    TIME MACHINE
+  </text>
+
+  <!-- Tagline -->
+  <text x="520" y="530" font-family="system-ui, -apple-system, sans-serif" font-size="22" fill="#94a3b8">
+    200 million years of uptime
+  </text>
+
+  <!-- Border accent -->
+  <rect x="0" y="0" width="1200" height="4" fill="url(#glow)"/>
+  <rect x="0" y="626" width="1200" height="4" fill="url(#glow)"/>
+</svg>
