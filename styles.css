@@ -219,6 +219,7 @@ code {
 .ghost-button,
 .nav-button {
   cursor: pointer;
+  touch-action: manipulation;
 }
 
 .ghost-button {
@@ -374,6 +375,7 @@ code {
   border-radius: 16px;
   cursor: pointer;
   white-space: nowrap;
+  touch-action: manipulation;
 }
 
 .timeline-button.is-active {
