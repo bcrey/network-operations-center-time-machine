@@ -249,7 +249,6 @@ code {
 .image-stage {
   position: relative;
   margin: 1rem 0 0;
-  aspect-ratio: 16 / 10;
   overflow: hidden;
   border-radius: 26px;
   background:
@@ -260,8 +259,8 @@ code {
 
 #nocImage {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  max-height: 70vh;
+  object-fit: contain;
   display: block;
   transition:
     opacity 220ms ease,
@@ -468,7 +467,6 @@ code {
   }
 
   .image-stage {
-    aspect-ratio: 4 / 3;
     border-radius: 18px;
   }
 
@@ -567,7 +565,6 @@ code {
   }
 
   .image-stage {
-    aspect-ratio: 3 / 2;
     border-radius: 14px;
   }
 
