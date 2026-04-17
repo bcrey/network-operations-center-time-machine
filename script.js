@@ -563,6 +563,31 @@ image.addEventListener("load", () => {
   image.classList.remove("is-loading");
 });
 
+/* Touch swipe on image stage */
+const stage = document.querySelector(".image-stage");
+let touchStartX = 0;
+let touchStartY = 0;
+
+stage.addEventListener("touchstart", (event) => {
+  touchStartX = event.changedTouches[0].clientX;
+  touchStartY = event.changedTouches[0].clientY;
+}, { passive: true });
+
+stage.addEventListener("touchend", (event) => {
+  const deltaX = event.changedTouches[0].clientX - touchStartX;
+  const deltaY = event.changedTouches[0].clientY - touchStartY;
+
+  if (Math.abs(deltaX) < 50 || Math.abs(deltaY) > Math.abs(deltaX)) {
+    return;
+  }
+
+  if (deltaX < 0) {
+    render(Math.min(timeline.length - 1, currentIndex + 1));
+  } else {
+    render(Math.max(0, currentIndex - 1));
+  }
+}, { passive: true });
+
 async function init() {
   const files = await loadImageFiles();
   timeline = buildTimeline(files);

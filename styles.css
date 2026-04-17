@@ -424,6 +424,10 @@ code {
   .hero-stats {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+
+  .detail-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 760px) {
@@ -432,34 +436,168 @@ code {
     padding: 0.6rem 0 1.4rem;
   }
 
+  .panel {
+    border-radius: 20px;
+  }
+
   .hero,
   .stage-panel,
   .dossier {
     padding: 1rem;
-    border-radius: 24px;
   }
 
   .hero h1 {
-    font-size: clamp(2.25rem, 12vw, 3.45rem);
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .hero-summary {
+    font-size: 0.95rem;
+  }
+
+  .hero-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero-stats .stat-card:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .stat-card {
+    padding: 0.75rem 0.9rem;
+    border-radius: 14px;
+  }
+
+  .image-stage {
+    aspect-ratio: 4 / 3;
+    border-radius: 18px;
+  }
+
+  .image-caption {
+    margin: 0.85rem 0 1rem;
+  }
+
+  .scrub-controls {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .nav-button {
+    flex: 1 1 0;
+    min-width: 0;
+    padding: 0.85rem 0.75rem;
+    border-radius: 14px;
+    text-align: center;
+  }
+
+  .scrubber {
+    order: 1;
+    flex-basis: 100%;
+  }
+
+  .scrubber-head span:nth-child(2) {
+    display: none;
+  }
+
+  .scrubber-note {
+    font-size: 0.85rem;
+  }
+
+  .ghost-button {
+    width: 100%;
+    padding: 0.85rem 1rem;
+  }
+
+  .stage-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.65rem;
+  }
+
+  .toolbar-pill {
+    justify-content: center;
+  }
+
+  .timeline-button {
+    padding: 0.65rem 0.85rem;
+    border-radius: 12px;
+    font-size: 0.88rem;
+  }
+
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-card {
+    padding: 0.85rem;
+    border-radius: 14px;
+  }
+
+  .dossier h3 {
+    font-size: 1.4rem;
+  }
+
+  .dossier-body {
+    font-size: 0.92rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .app-shell {
+    width: 100vw;
+    padding: 0.4rem 0 1rem;
+  }
+
+  .hero,
+  .stage-panel,
+  .dossier {
+    padding: 0.75rem;
+    border-radius: 16px;
+  }
+
+  .hero h1 {
+    font-size: 1.75rem;
   }
 
   .hero-stats {
     grid-template-columns: 1fr;
   }
 
-  .stage-toolbar,
-  .scrub-controls {
-    flex-direction: column;
-    align-items: stretch;
+  .hero-stats .stat-card:last-child {
+    grid-column: auto;
   }
 
-  .nav-button,
-  .ghost-button {
-    width: 100%;
+  .image-stage {
+    aspect-ratio: 3 / 2;
+    border-radius: 14px;
   }
 
-  .image-caption {
-    margin: 0.85rem 0 1rem;
+  .image-caption h2 {
+    font-size: 1.5rem;
+  }
+
+  .nav-button {
+    font-size: 0.88rem;
+    padding: 0.75rem 0.6rem;
+  }
+}
+
+@media (pointer: coarse) {
+  #timelineSlider {
+    height: 16px;
+  }
+
+  #timelineSlider::-webkit-slider-thumb {
+    width: 32px;
+    height: 32px;
+  }
+
+  #timelineSlider::-moz-range-thumb {
+    width: 32px;
+    height: 32px;
+  }
+
+  #timelineSlider::-moz-range-track {
+    height: 16px;
   }
 }
 
