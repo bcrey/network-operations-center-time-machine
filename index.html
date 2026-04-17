@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>NOC Time Machine</title>
+    <meta
+      name="description"
+      content="A joke app that imagines what a Network Operations Center might have looked like through the ages."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="panel hero">
+        <div class="hero-copy">
+          <div>
+            <h1>Network Operations Center Time Machine</h1>
+            <p class="hero-summary">
+              Scrub through 200 million years of Network Operations Center
+              uptime.
+            </p>
+          </div>
+          <div class="hero-stats">
+            <article class="stat-card">
+              <span>Archive span</span>
+              <strong id="rangeSummary"></strong>
+            </article>
+            <article class="stat-card">
+              <span>Snapshots</span>
+              <strong id="snapshotCount"></strong>
+            </article>
+            <article class="stat-card">
+              <span>Starting point</span>
+              <strong>2025, then backward</strong>
+            </article>
+          </div>
+        </div>
+      </header>
+
+      <main class="layout">
+        <section class="panel stage-panel">
+          <div class="stage-toolbar">
+            <div class="toolbar-pill">
+              <span>Frame</span>
+              <strong id="frameIndex"></strong>
+            </div>
+            <button id="playButton" class="ghost-button" type="button">
+              Auto-scrub
+            </button>
+          </div>
+
+          <figure class="image-stage">
+            <img id="nocImage" alt="" />
+          </figure>
+
+          <div class="image-caption">
+            <p class="eyebrow" id="eraBand"></p>
+            <h2 id="yearLabel"></h2>
+            <p id="eraTitle" class="caption-summary"></p>
+          </div>
+
+          <div class="scrub-controls">
+            <button id="prevButton" class="nav-button" type="button">
+              Earlier
+            </button>
+
+            <div class="scrubber">
+              <div class="scrubber-head">
+                <span id="minLabel"></span>
+                <span>Temporal slider</span>
+                <span id="maxLabel"></span>
+              </div>
+              <input
+                id="timelineSlider"
+                type="range"
+                min="0"
+                max="0"
+                step="1"
+                value="0"
+                aria-label="Scrub through the NOC timeline"
+              />
+              <p id="jumpLabel" class="scrubber-note"></p>
+            </div>
+
+            <button id="nextButton" class="nav-button" type="button">
+              Later
+            </button>
+          </div>
+
+          <div class="timeline-strip">
+            <div id="timelineButtons" class="timeline-buttons"></div>
+          </div>
+        </section>
+
+        <aside class="side-panel">
+          <section class="panel dossier">
+            <p class="eyebrow">Archive Notes</p>
+            <h3 id="dossierTitle"></h3>
+            <p id="descriptionText" class="dossier-body"></p>
+
+            <div class="detail-grid">
+              <article class="detail-card">
+                <span>Primary tooling</span>
+                <strong id="toolingText"></strong>
+              </article>
+              <article class="detail-card">
+                <span>Alerting style</span>
+                <strong id="alertingText"></strong>
+              </article>
+              <article class="detail-card">
+                <span>Escalation ritual</span>
+                <strong id="escalationText"></strong>
+              </article>
+              <article class="detail-card">
+                <span>Operator mood</span>
+                <strong id="moodText"></strong>
+              </article>
+            </div>
+          </section>
+        </aside>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
